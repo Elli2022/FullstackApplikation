@@ -39,6 +39,9 @@
     "mocha": "^10.2.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": "12.x"
   }
   
 }
