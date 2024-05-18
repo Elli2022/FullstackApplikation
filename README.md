@@ -1,40 +1,40 @@
-# JS 3 - School Assignment - First Fullstack MERN Application
+# First Fullstack MERN Application
 
 ## Overview
-In this project, I built a fullstack application using the MERN stack (MongoDB, Express, React, Node.js). This comprehensive stack includes MongoDB and Redis for the database, Express and Node.js for the backend (including a gateway and microservices), and React for the frontend. The application supports user registration, login, token management, and ensures secure microservice operations behind a gateway. The backend also logs activities to monitor system failures, hacking attempts, and other irregularities.
+This project is a fullstack application built using the MERN stack (MongoDB, Express, React, Node.js). The stack includes MongoDB and Redis for the database, Express and Node.js for the backend (including a gateway and microservices), and React for the frontend. The application supports user registration, login, token management, and ensures secure microservice operations behind a gateway. The backend also logs activities to monitor system failures, hacking attempts, and other irregularities.
 
 ### Features
 - **User Registration Flow:**
-  - Create a registration form in React.
-  - Submit the form data through the Express gateway to the Node.js backend service.
-  - Temporarily store new registrations in Redis cache until completion or timeout.
-  - Register the user upon following the registration link, saving their details in MongoDB.
+  - Registration form created in React.
+  - Form data submitted through the Express gateway to the Node.js backend service.
+  - New registrations temporarily stored in Redis cache until completion or timeout.
+  - Users register by following a registration link, saving their details in MongoDB.
 
 - **Authentication:**
-  - Enable registered users to log in via a form.
-  - Authenticate users against MongoDB through the microservice via the Express gateway.
-  - On successful login, issue a JWT token to the client through the gateway.
+  - Users log in via a form.
+  - Authentication against MongoDB through the microservice via the Express gateway.
+  - On successful login, a JWT token is issued to the client through the gateway.
   - The gateway manages the backend session with the token.
   - The client handles the frontend session with the token.
 
 - **Session Handling:**
   - The gateway caches tokens in Redis temporarily.
   - The client maintains the token throughout the session.
-  - Validate client tokens against the cached tokens for every secure request.
+  - Client tokens validated against the cached tokens for every secure request.
 
 - **Welcome Page:**
-  - Present a welcome page upon successful login, displaying user data from MongoDB.
+  - Displays user data from MongoDB upon successful login.
 
 - **Editing User Data:**
-  - Provide users with the capability to edit their information.
+  - Users can edit their information.
 
-### The VG (Pass with Distinction)
-Unleashed my creativity to enhance the application with additional features, such as:
+### Enhanced Features
+Enhanced the application with additional features, such as:
 - Creating a blogging platform.
 
 ### Requirements
-- The microservice must be session-based and secured through the Express gateway.
-- MongoDB should be effectively utilized.
+- The microservice is session-based and secured through the Express gateway.
+- Effective utilization of MongoDB.
 
 ### Development Guidelines
 - **DB Setup:** Configured MongoDB and Redis for storing user data and session caching.
